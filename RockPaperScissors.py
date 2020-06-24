@@ -35,8 +35,8 @@ def play():
         print('Computer Wins!')
         players_results.append('loss')
     print('=====================================================')
-    return players_throws.append(choices[player_choice].lower())
-   # players_results
+    players_throws.append(choices[player_choice].lower())
+
 
 
 def compare(playerChoice, botChoice):
@@ -77,5 +77,12 @@ for _ in range(rounds):
     loss = players_results.count('loss')
     tie = players_results.count('tie')
     print (f'Wins:{win} Losses:{loss} Ties: {tie}')
+
+if loss > win:
+    print ('Computer wins')
+elif win > loss:
+    print ('Player wins')
+else:
+    print ("It's a tie")
 
 final = input("Press enter to close")
