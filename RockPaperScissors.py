@@ -27,6 +27,7 @@ def play(players_results):
     else:
         print('Computer Wins!')
         players_results.append('loss')
+    print('=====================================================')
     return players_throws.append(choices[player_choice].lower())
    # players_results
 
