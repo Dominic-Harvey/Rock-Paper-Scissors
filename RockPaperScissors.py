@@ -56,3 +56,4 @@ for _ in range(rounds):
     score = (sum(x > 0 for x in winner))
     
 print (f"You won {score} out of {rounds}")
+final = input("Press any key to close")
