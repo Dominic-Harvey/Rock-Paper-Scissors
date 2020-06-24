@@ -73,6 +73,9 @@ rounds = int(input("How many rounds would you like to play? "))
 
 for _ in range(rounds):
     play()
-   
+    win = players_results.count('win')
+    loss = players_results.count('loss')
+    tie = players_results.count('tie')
+    print (f'Wins:{win} Losses:{loss} Ties: {tie}')
 
 final = input("Press enter to close")
