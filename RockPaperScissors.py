@@ -50,19 +50,14 @@ def opposite_throw(last_throw):
 
 
 def throw_predictor(players_results, players_throws):
-    print (players_throws)
-    print (players_results)
     try:
         if players_results[-1] == 'loss' and players_results[-2] == 'loss':
             smart_bot_choice = players_throws[-1]
-            print ('using loss algo')
         elif players_results[-1] == 'win' or players_results[-2] == 'win' and players_results[-1] == 'win':
             smart_bot_choice = opposite_throw(players_throws[-1])
-            print ('using win algo') 
         return smart_bot_choice
     except:
         smart_bot_choice = choices[random.randint(1,3)]
-        print ('using else calc')
         return smart_bot_choice
 
 
@@ -70,5 +65,5 @@ rounds = int(input("How many rounds would you like to play? "))
 for _ in range(rounds):
     play(players_results)
    
-   
+
 final = input("Press enter to close")
