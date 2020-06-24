@@ -15,7 +15,14 @@ choices={
     }
 
 def play(players_results):
-    player_choice = input("Rock Paper or Scissors? ").lower()
+    
+    def ask_choice():
+        player_choice = input("Rock Paper or Scissors?(r,p,s) ").lower()
+        if not player_choice in choices:
+            return ask_choice()
+        return player_choice
+
+    player_choice = ask_choice()
     bot_choice = throw_predictor(players_results, players_throws)
     print (f"{choices[player_choice]} VS {bot_choice}")
     if choices[player_choice] == bot_choice:
