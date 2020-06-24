@@ -14,7 +14,7 @@ choices={
        3 : 'scissors'
     }
 
-def play(players_results):
+def play():
     
     def ask_choice():
         player_choice = input("Rock Paper or Scissors?(r,p,s) ").lower()
@@ -70,8 +70,9 @@ def throw_predictor(players_results, players_throws):
 
 
 rounds = int(input("How many rounds would you like to play? "))
+
 for _ in range(rounds):
-    play(players_results)
+    play()
    
 
 final = input("Press enter to close")
