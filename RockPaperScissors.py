@@ -74,8 +74,7 @@ def pattern_matcher():
     for i in range(len(players_throws)-1):
         len_of_pattern = ((len(players_throws)-i))
         if len_of_pattern <= len(players_throws)/2:
-            for ix in range(len(players_throws)):
-                start_of_slice = ix
+            for start_of_slice in range(len(players_throws)):
                 end_of_slice = start_of_slice+len_of_pattern
                 if end_of_slice < len(players_throws):
                     players_throws_to_check_against = slice(start_of_slice, end_of_slice)
